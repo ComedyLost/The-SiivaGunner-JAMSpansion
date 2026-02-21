@@ -1,0 +1,42 @@
+{
+ "version": "2.2.4",
+ "songName": "Bopeebo (Sonic Mix) [Beta Mix]",
+ "artist": "DingusCola",
+ "charter": "Mr. DJ",
+ "offsets": {
+  "instrumental": 5
+ },
+ "playData": {
+  "difficulties": [
+   "siiva"
+  ],
+  "characters": {
+   "player": "sonic-playable",
+   "girlfriend": "amytails",
+   "opponent": "dad",
+   "instrumental": "sonic",
+   "opponentVocals": [
+    "dad"
+   ],
+   "playerVocals": [
+    "sonic-playable"
+   ]
+  },
+  "stage": "mainStageErect",
+  "noteStyle": "funkin",
+  "ratings": {
+   "siiva": 5
+  },
+  "album": "sonicmix1",
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.1",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 120,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

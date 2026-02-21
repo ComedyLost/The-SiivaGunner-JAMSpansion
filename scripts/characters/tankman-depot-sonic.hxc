@@ -1,0 +1,106 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import flixel.FlxG;
+
+using StringTools;
+
+class TankmanDepotSonicCharacter extends MultiSparrowCharacter
+{
+  function new()
+  {
+    super('tankman-depot-sonic');
+    ignoreExclusionPref.push("ugh");
+    ignoreExclusionPref.push("piss");
+    ignoreExclusionPref.push("bitch");
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    super.onNoteHit(event);
+
+    // Override the hit note animation.
+    switch (event.note.kind)
+    {
+      case "ugh":
+        holdTimer = 0;
+        this.playAnimation('ugh', true, true);
+        return;
+      case "hehPrettyGood":
+        holdTimer = 0;
+        this.playAnimation('hehPrettyGood', true, true);
+        return;
+    }
+  }
+
+  function onCreate(event:HitNoteScriptEvent) {
+    super.onCreate(event);
+    for (asset in [/*'base head forward',*/ /*'head forward',*/ 'mic hand this guy haha', 'tankman body', 'Tankman hand mic', 'tank head turn left', 'Tankman default head']) {
+      replaceSymbolGraphicNew(asset, Paths.image('characters/tankmanSonicAnimsSiiva/' + asset + ' siiva'), (asset == 'base head forward'));
+      if (asset == 'tank head turn left') {
+        var elements:FlxMatrix = getSymbolElementsNew(asset);
+        for (element in elements) {
+          var matrix = element.matrix;
+          // matrix.tx = 25;
+          matrix.ty = -10;
+        }
+      }
+      trace('REPLACING ASSETS FOR ' + asset);
+      // this.replaceSymbolGraphic(asset, Paths.image(asset + ' siiva'););
+    }
+  }
+
+  public function replaceSymbolGraphicNew(symbol:String, graphic:Null<FlxGraphicAsset>, adjustScale:Bool = true):Void
+  {
+    var elements:Array<Element> = getSymbolElementsNew(symbol);
+  
+    for (element in elements)
+    {
+      var atlasInstance:AtlasInstance = element.toAtlasInstance();
+      // if (atlasInstance == null) continue;
+      var frame:Null<FlxFrame> = graphic != null ? FlxG.bitmap.add(graphic)?.imageFrame?.frame : null;
+
+      atlasInstance.replaceFrame(frame, (adjustScale ?? true));
+      element = atlasInstance;
+    }
+  }
+  
+  public function getSymbolElementsNew(symbol:String):Array<Element>
+  {  
+    var symbolInstance:Null<SymbolItem> = this.library.getSymbol(symbol);
+  
+    if (symbolInstance == null)
+    {
+      throw 'Symbol not found in atlas: ${symbol}';
+      return [];
+    }
+
+    var elements:Array<Element> = symbolInstance.timeline.getElementsAtIndex(0);
+
+    if (elements?.length == 0)
+    {
+      trace('WARNING: No Atlas Elements found for "$symbol" symbol.');
+    }
+
+    return elements ?? [];
+  }  
+
+  override function getAtlasSettings():AtlasSpriteSettings
+    {
+      trace('REPLACING TANKMAN ASSETS');
+      return {
+        onSymbolCreate: (symbol) -> {
+          symbol.timeline.forEachLayer((layer) -> {
+            trace(layer.name);
+            if (['mic hand this guy haha', 'tankman body', 'Tankman hand mic', 'tank head turn left', 'Tankman default head'].contains(layer.name))
+            // if (layer.name.startsWith("tankman body") || layer.name.startsWith("mic hand this guy haha") || layer.name.startsWith("HAT"))
+            {
+              trace('EVIL HAPPENING');
+              this.replaceSymbolGraphic(layer.name, Paths.image('characters/tankmanSonicAnimsSiiva/' + layer.name + ' siiva'));
+              // layer.visible = false;
+            }
+          });
+        }
+      };
+    }  
+}

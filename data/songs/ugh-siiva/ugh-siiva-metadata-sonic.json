@@ -1,0 +1,41 @@
+{
+ "version": "2.2.4",
+ "songName": "Ugh (Sonic Mix) [HQ]",
+ "artist": "DingusCola",
+ "charter": "Mr. DJ",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "siiva"
+  ],
+  "characters": {
+   "player": "sonic-playable",
+   "girlfriend": "amytails",
+   "opponent": "tankman-depot-sonic",
+   "instrumental": "sonic",
+   "opponentVocals": [
+    "tankman-depot"
+   ],
+   "playerVocals": [
+    "sonic-playable"
+   ]
+  },
+  "stage": "tankmanBattlefieldErect",
+  "noteStyle": "funkin",
+  "ratings": {
+   "easy": 5,
+   "normal": 8,
+   "siiva": 11
+  },
+  "album": "sonicmix1"
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.1",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 160,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

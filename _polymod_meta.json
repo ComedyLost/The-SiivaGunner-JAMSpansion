@@ -1,0 +1,29 @@
+{
+  "title": "TSC: Siiva the Hedgepack JAMSpansion",
+  "description": "Fanmade rips of SONIC JAM songs.",
+  "contributors": [
+    {
+      "name": "Comedy Lost",
+      "role": "Coding / Ripper",
+      "url": "https://twitter.com/C0MEDYLOST"
+    },
+    {
+      "name": "iScreamTeam",
+      "role": "The developers of SONIC JAM & Created the original songs",
+      "url": "https://twitter.com/iScreamDEV"
+    },
+    {
+      "name": "Trayfellow",
+      "role": "Recreated Depot Tankman (Used in Ugh (Sonic Mix) [HQ])",
+      "url": "https://twitter.com/Yoylecity_Tray"
+    },
+    {
+      "name": "DaBigJ",
+      "role": "Made art used in Polymod Icon",
+      "url": "https://twitter.com/DaBigJ_Twit"
+    }
+  ],
+  "api_version": "0.8.0",
+  "mod_version": "1.0.0",
+  "license": "Apache-2.0"
+}

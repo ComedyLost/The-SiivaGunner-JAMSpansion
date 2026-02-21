@@ -1,0 +1,29 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.play.GameOverSubState;
+import funkin.play.character.BaseCharacter;
+import funkin.play.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import funkin.play.character.AnimateAtlasCharacter;
+
+class AmyTailsPolishCharacter extends AnimateAtlasCharacter {
+	function new() {
+		super('amytails-polish');
+	}
+
+  	public var normalChar:BaseCharacter; // Make public so we can fuck with it lol
+
+  	override function onAdd(event:ScriptEvent) {
+		super.onAdd(event);
+
+	  	normalChar = CharacterDataParser.fetchCharacter('gf-polish-sonic');
+    	normalChar.zIndex = this.zIndex - 1;
+
+		PlayState.instance.currentStage.addCharacter(normalChar, CharacterType.OTHER);
+		normalChar.setPosition(this.x + 300, this.y);
+		normalChar.characterType = CharacterType.GF;
+		PlayState.instance.currentStage.refresh(); // Apply z-index.
+	}
+}
