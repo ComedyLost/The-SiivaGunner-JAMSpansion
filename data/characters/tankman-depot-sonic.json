@@ -10,10 +10,10 @@
   "singTime": 8,
   "startingAnimation": "idle",
   "isPixel": false,
-  "assetPath": "characters/tankmanCaptainDepot",
+  "assetPath": "characters/tankmanCaptainDepotSonic",
   "healthIcon": {
     "offsets": [0, 0],
-    "id": "tankman-depot",
+    "id": "tankman-depot-sonic",
     "flipX": false,
     "isPixel": false,
     "scale": 1

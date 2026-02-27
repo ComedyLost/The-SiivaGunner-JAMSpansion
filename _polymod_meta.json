@@ -23,6 +23,9 @@
       "url": "https://twitter.com/DaBigJ_Twit"
     }
   ],
+  "dependencies": {
+    "SonicJamX": ""
+  },
   "api_version": "0.8.0",
   "mod_version": "1.0.0",
   "license": "Apache-2.0"

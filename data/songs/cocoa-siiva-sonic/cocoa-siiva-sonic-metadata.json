@@ -1,0 +1,40 @@
+{
+ "version": "2.2.4",
+ "songName": "Cocoa (Sonic Mix) [HQ]",
+ "artist": "DingusCola",
+ "charter": "KoloInDaCrib",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "siiva"
+  ],
+  "characters": {
+   "player": "sonic-christmas",
+   "girlfriend": "amytails-christmas",
+   "opponent": "parents-christmas",
+   "instrumental": "",
+   "opponentVocals": [
+    "parents-christmas"
+   ],
+   "playerVocals": [
+    "sonic-christmas"
+   ]
+  },
+  "stage": "mallXmasErect",
+  "noteStyle": "funkin",
+  "ratings": {
+   "siiva": 5
+  },
+  "album": "sonicmix1",
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.1",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 130,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

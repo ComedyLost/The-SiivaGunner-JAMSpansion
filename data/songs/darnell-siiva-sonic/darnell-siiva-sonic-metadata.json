@@ -1,0 +1,42 @@
+{
+ "version": "2.2.4",
+ "songName": "Darnell (Sonic Mix) [HQ]",
+ "artist": "DingusCola",
+ "charter": "Mr. DJ",
+ "offsets": {
+  "instrumental": 5
+ },
+ "playData": {
+  "difficulties": [
+   "siiva"
+  ],
+  "characters": {
+   "player": "sonic-playable",
+   "girlfriend": "amytails",
+   "opponent": "darnell",
+   "instrumental": "",
+   "opponentVocals": [
+    "darnell"
+   ],
+   "playerVocals": [
+    "sonic-playable"
+   ]
+  },
+  "stage": "phillyStreetsSonic",
+  "noteStyle": "funkin",
+  "ratings": {
+   "siiva": 8
+  },
+  "album": "sonicmix1",
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.3",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 155,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}
